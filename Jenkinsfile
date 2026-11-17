@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -68,35 +69,36 @@ pipeline {
             }
         }
 
-        
-stage('Update Manifest Repo') {
-    steps {
-        withCredentials([
-            usernamePassword(
-                credentialsId: "${GIT_CREDENTIALS_ID}",
-                usernameVariable: 'GH_USER',
-                passwordVariable: 'GH_TOKEN'
-            )
-        ]) {
-            sh """
-                git config user.name "manasavenu-2004"
-                git config user.email "manasavenu88914@gmail.com"
+        stage('Update Manifest Repo') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: "${GIT_CREDENTIALS_ID}",
+                        usernameVariable: 'GH_USER',
+                        passwordVariable: 'GH_TOKEN'
+                    )
+                ]) {
+                    sh """
+                        git config user.name "manasavenu-2004"
+                        git config user.email "manasavenu88914@gmail.com"
 
-                sed -i 's|image:.*|image: ${DOCKER_IMAGE}:${BUILD_NUMBER}|' manifests/deployment.yml
+                        sed -i 's|image:.*|image: ${DOCKER_IMAGE}:${BUILD_NUMBER}|' manifests/deployment.yml
 
-                git add manifests/deployment.yml
+                        git add manifests/deployment.yml
 
-                git commit -m "Update TechWorld image tag to ${BUILD_NUMBER} [skip ci]"
+                        git commit -m "Update TechWorld image tag to ${BUILD_NUMBER} [skip ci]"
 
-                git remote set-url origin https://\${GH_USER}:\${GH_TOKEN}@github.com/manasavenu-2004/TechWorld.git
+                        git remote set-url origin https://\${GH_USER}:\${GH_TOKEN}@github.com/manasavenu-2004/TechWorld.git
 
-                git pull --rebase origin main
+                        git pull --rebase origin main
 
-                git push origin main
-            """
+                        git push origin main
+                    """
+                }
+            }
         }
-    }
-}
+
+    } // Closes stages
 
     post {
         success {
