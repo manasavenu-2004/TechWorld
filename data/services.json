@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development",
+    "description": "Modern, fast, and responsive websites and web applications built using clean and standard web technologies.",
+    "icon": "🌐"
+  },
+  {
+    "id": 2,
+    "title": "Cloud Computing",
+    "description": "Secure and scalable cloud setup, migration, and management on leading cloud providers to empower your business.",
+    "icon": "☁️"
+  },
+  {
+    "id": 3,
+    "title": "DevOps",
+    "description": "Streamline software delivery with automated CI/CD pipelines, automated testing, and faster deployment cycles.",
+    "icon": "⚡"
+  },
+  {
+    "id": 4,
+    "title": "Docker",
+    "description": "Package applications into lightweight, portable containers to ensure consistent performance across all environments.",
+    "icon": "🐳"
+  },
+  {
+    "id": 5,
+    "title": "Kubernetes",
+    "description": "Automated container orchestration, scaling, self-healing, and seamless management for high-availability production workloads.",
+    "icon": "☸️"
+  }
+]

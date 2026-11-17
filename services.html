@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - TechWorld IT Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation Bar -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <a href="index.html">Tech<span>World</span></a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Our IT Services</h1>
+      <p>Loaded dynamically from our services catalog using the JavaScript Fetch API.</p>
+    </div>
+  </section>
+
+  <!-- Dynamic Services Catalog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Specialized Technology Offerings</h2>
+        <p>Explore our core engineering capabilities and discover how we can support your business goals.</p>
+      </div>
+
+      <!-- Container dynamically populated by js/script.js from data/services.json -->
+      <div id="services-container" class="grid-3">
+        <!-- JavaScript will populate services here -->
+        <p class="status-message">Loading services catalog...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our 4-Step Engagement Process</h2>
+        <p>From initial discovery to ongoing production reliability.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="text-align: left;">
+          <h3 style="color: #0056b3;">1. Technical Consultation & Discovery</h3>
+          <p>We analyze your existing architecture, workflow bottlenecks, and project requirements to outline a clear technical roadmap.</p>
+        </div>
+        <div class="card" style="text-align: left;">
+          <h3 style="color: #0056b3;">2. Solution Design & Architecture</h3>
+          <p>Our engineers architect secure cloud topologies, container models, and automated CI/CD workflows tailored to your scale.</p>
+        </div>
+        <div class="card" style="text-align: left;">
+          <h3 style="color: #0056b3;">3. Implementation & Testing</h3>
+          <p>We build, containerize, and test applications rigorously using automated checks to ensure reliable, zero-downtime rollouts.</p>
+        </div>
+        <div class="card" style="text-align: left;">
+          <h3 style="color: #0056b3;">4. Monitoring & Continuous Support</h3>
+          <p>Post-launch support includes cluster health monitoring, performance tuning, and 24/7 technical incident resolution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Need a Custom Solution for Your Company?</h2>
+      <p>Get in touch with our solutions architects to design a custom package for your organization.</p>
+      <a href="contact.html" class="btn btn-outline">Schedule a Discussion</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>TechWorld</h3>
+          <p>TechWorld is a full-service IT solutions company specializing in Web Development, Cloud Computing, DevOps, Docker, and Kubernetes.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>Email: info@techworld.com</p>
+          <p>Phone: +1 (800) 123-4567</p>
+          <p>Address: 123 Tech Park, Innovation Way</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> TechWorld IT Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

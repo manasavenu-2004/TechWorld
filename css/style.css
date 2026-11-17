@@ -1,0 +1,494 @@
+/* ==========================================================
+   TechWorld IT Services - Main Stylesheet
+   Theme: Professional Blue and White
+   Simple, clean, and beginner-friendly CSS
+   ========================================================== */
+
+/* Reset & Basic Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Typography & Base Elements */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #004080;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Centered Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================================
+   Header & Navigation
+   ========================================================== */
+.header {
+  background-color: #0056b3;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo a {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #b3d7ff;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #004085;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Hero Section
+   ========================================================== */
+.hero {
+  background: linear-gradient(135deg, #0056b3 0%, #003366 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: #e0ecff;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #0056b3;
+}
+
+/* ==========================================================
+   Page Headers (for Inner Pages)
+   ========================================================== */
+.page-banner {
+  background-color: #f0f7ff;
+  border-bottom: 2px solid #d0e2ff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.page-banner h1 {
+  font-size: 32px;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.page-banner p {
+  font-size: 17px;
+  color: #555555;
+}
+
+/* ==========================================================
+   Sections & Layout
+   ========================================================== */
+.section {
+  padding: 60px 0;
+}
+
+.section-light {
+  background-color: #f7faff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #666666;
+  font-size: 16px;
+}
+
+/* Responsive Grids */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d0e2ff;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 86, 179, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 86, 179, 0.15);
+  border-color: #007bff;
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #0056b3;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+  background-color: #0056b3;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta-banner h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta-banner p {
+  font-size: 17px;
+  margin-bottom: 25px;
+  color: #e0ecff;
+}
+
+/* ==========================================================
+   Contact Page Styles
+   ========================================================== */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 35px;
+}
+
+.contact-form-box {
+  background-color: #f7faff;
+  border: 1px solid #d0e2ff;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #004085;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b3d7ff;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  display: none;
+  font-weight: bold;
+}
+
+.form-message.success {
+  display: block;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  background-color: #ffffff;
+  border: 1px solid #d0e2ff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.info-item h3 {
+  color: #0056b3;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.info-item p {
+  color: #555555;
+  font-size: 15px;
+}
+
+/* Loading & Fallback Notice for Services */
+.status-message {
+  text-align: center;
+  padding: 30px;
+  color: #0056b3;
+  font-size: 18px;
+  grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+.footer {
+  background-color: #002b5c;
+  color: #ffffff;
+  margin-top: auto;
+  padding: 40px 0 20px 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.footer-column p {
+  color: #cce0ff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #cce0ff;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #004080;
+  padding-top: 20px;
+  color: #99c2ff;
+  font-size: 13px;
+}
+
+/* ==========================================================
+   Responsive Design (Mobile & Tablet)
+   ========================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0056b3;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    text-align: center;
+    padding: 12px;
+    border-radius: 0;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
