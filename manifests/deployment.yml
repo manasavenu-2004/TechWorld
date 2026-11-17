@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: techworld
-          image: manasavenu2004/techworld:latest
+          image: manasavenu2004/techworld:3
           imagePullPolicy: Always
 
           ports:
